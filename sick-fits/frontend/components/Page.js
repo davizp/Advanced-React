@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../components/Header';
+import Meta from '../components/Meta';
 
 class Page extends Component {
 
@@ -8,6 +9,7 @@ class Page extends Component {
 
     return (
       <div>
+        <Meta />
         <p>Heey I'm the page component</p>
         <Header />
         {this.props.children}
