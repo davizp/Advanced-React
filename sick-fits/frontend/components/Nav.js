@@ -9,7 +9,6 @@ const Nav = () => (
       <a>Sell!</a>
     </Link>
   </div>
-  );
-  
-  export default Nav;
-  
+);
+
+export default Nav;

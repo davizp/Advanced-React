@@ -1,4 +1,3 @@
-
 const Sell = props => (
   <div>
     <p>Sell!</p>
