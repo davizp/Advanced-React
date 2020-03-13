@@ -4,7 +4,7 @@ import NavStyles from './styles/NavStyles';
 const Nav = () => (
   <NavStyles>
     <Link href="/items">
-      <a href="">items</a>
+      <a href="">Shop</a>
     </Link>
     <Link href="/sell">
       <a href="">sell</a>
