@@ -15,14 +15,14 @@ class Item extends Component {
       <ItemStyles>
         <Title>
           {item.image && <img src={item.image} alt={item.title} />}
-          <Link href={{ pathName: '/item', query: { id: item.id } }}>
+          <Link href={{ pathname: '/update', query: { id: item.id } }}>
             <a>{item.title}</a>
           </Link>
         </Title>
         <PriceTag>{formatMoney(item.price)}</PriceTag>
 
         <div className="buttonList">
-          <Link href={{ pathName: 'update', query: { id: item.id } }}>
+          <Link href={{ pathname: '/update', query: { id: item.id } }}>
             <a>Edit ✏️</a>
           </Link>
           <button>Add To Cart</button>

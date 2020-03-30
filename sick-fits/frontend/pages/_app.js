@@ -4,11 +4,11 @@ import { ApolloProvider } from 'react-apollo';
 import withData from '../lib/withData';
 
 class MyApp extends App {
-  static async getInitailProps({ Component , ctx }) {
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
 
-    if(Component.getInitailProps) {
-      pageProps = await Component.getInitailProps(ctx);
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx);
     }
 
     // this exposes the query to the user
