@@ -50,10 +50,10 @@ class UpdateItem extends Component {
     this.setState({ [name]: val });
   };
 
-  handleSubmit = updateItem => async event => {
+  handleSubmit = updateItemMutation => async event => {
     event.preventDefault();
 
-    const res = await updateItem({
+    const res = await updateItemMutation({
       variables: {
         id: this.props.id,
         ...this.state
