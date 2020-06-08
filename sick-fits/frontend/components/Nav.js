@@ -1,8 +1,14 @@
 import Link from 'next/link';
 import NavStyles from './styles/NavStyles';
+import User from './User';
 
 const Nav = () => (
   <NavStyles>
+    <User>
+      {({ me }) => (
+        !!me.name && <p>{me.name}</p>
+      )}
+    </User>
     <Link href="/items">
       <a href="">Shop</a>
     </Link>

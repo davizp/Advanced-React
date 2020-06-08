@@ -69,7 +69,7 @@ const mutations = {
     const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
 
     // We set the jwt as a cookie
-    context.response.cookie('token', {
+    context.response.cookie('token', token, {
       httpOnly: true,
       maxAge: 1000 * 60 * 60 * 24 * 365, // 1 year cookie
     });
