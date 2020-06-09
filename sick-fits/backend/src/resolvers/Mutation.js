@@ -76,6 +76,37 @@ const mutations = {
 
     return user;
   },
+  async signIn(parent, args, context, info) {
+    const { email, password } = args;
+
+    // check if user exists
+    const user = await context.db.query.user({ where: { email }});
+
+    console.log('user', user);
+
+    if (!user) {
+      throw new Error('Invalid email or password');
+    }
+
+    // check if password is correct
+    const valid = await bcrypt.compare(password, user.password);
+
+    if (!valid) {
+      throw new Error('Invalid email or password')
+    }
+
+    // generate JWT Token
+    const token = jwt.sign({ userId: user.id }, process.env.APP_SECRET);
+
+    // Set Cookie
+    context.response.cookie('token', token, {
+      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 24 * 365
+    })
+
+    // Return the user
+    return user;
+  }
 };
 
 module.exports = mutations;
