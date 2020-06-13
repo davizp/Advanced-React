@@ -8,11 +8,22 @@ const randomBytesPromisified = promisify(randomBytes);
 
 const mutations = {
   async createItem(parent, args, context, info) {
-    // Todo: Check if they are logged in
+
+    if (!context.request.userId) {
+      throw Error('You must be logged in to do that!');
+    }
 
     const item = await context.db.mutation.createItem(
       {
-        data: { ...args },
+        data: {
+          // This is how to create a relationship between and the Item and the user
+          user: {
+            connect: {
+              id: context.request.userId
+            }
+          },
+          ...args
+        },
       },
       info
     );
@@ -133,8 +144,6 @@ const mutations = {
       where: { email },
       data: { resetToken, resetTokenExpiry }
     });
-
-    console.log('res', res);
 
     // email them the reset token
     const mailResponse = await transport.sendMail({
