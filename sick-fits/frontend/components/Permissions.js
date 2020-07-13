@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 import Error from './ErrorMessage';
+import UserPermissionsRow from './UserPermissionsRow';
 import Table from './styles/Table';
-import SickButton from './styles/SickButton';
 
 const ALL_USERS_QUERY = gql`
   query ALL_USERS_QUERY {
@@ -34,34 +35,31 @@ const Permissions = (props) => (
         <div>
           <Error error={error} />
           <p>Heey</p>
-          {(!loading && !error) &&
+          {!loading && !error && (
             <Table>
               <thead>
                 <tr>
                   <th>Name</th>
                   <th>Email</th>
-                  {permissions.map(permission => <th>{permission.replace('_', ' ')}</th>)}
+                  {permissions.map((permission) => (
+                    <th key={`permission-title-${permission}`}>
+                      {permission.replace('_', ' ')}
+                    </th>
+                  ))}
                   <th>ACTIONS</th>
                 </tr>
               </thead>
               <tbody>
                 {data.users.map((user) => (
-                  <tr>
-                    <td>{user.name}</td>
-                    <td>{user.email}</td>
-                    {permissions.map(permission => (
-                      <td>
-                        <label htmlFor={`${user.id}-permission-${permission}`}>
-                          <input type="checkbox" defaultChecked={user.permissions.includes(permission)} />
-                        </label>
-                      </td>
-                    ))}
-                    <td><SickButton>Update</SickButton></td>
-                  </tr>
+                  <UserPermissionsRow
+                    key={`user-permission-${user.id}`}
+                    listOfPermissions={permissions}
+                    user={user}
+                  />
                 ))}
               </tbody>
             </Table>
-          }
+          )}
         </div>
       );
     }}
