@@ -3,6 +3,7 @@ const jwt = require('jsonwebtoken');
 const { randomBytes } = require('crypto');
 const { promisify } = require('util');
 const { resetPasswordTemplate, transport } = require('../mail');
+const { hasPermission } = require('../utils');
 
 const randomBytesPromisified = promisify(randomBytes);
 
@@ -204,6 +205,38 @@ const mutations = {
 
     // return the user
     return updatedUser;
+  },
+  async updatePermissions(parent, args, context, info) {
+    // Check if they are logged in
+    if (!context.request.userId) {
+      throw new Error('You must be logged in!');
+    }
+
+    // Query the current user
+    const currentUser = await context.db.query.user(
+      { where: { id: context.request.userId } },
+      '{ id, permissions, email, name }'
+    );
+
+    if (!currentUser) {
+      throw new Error('User doesn\'t exists!');
+    }
+
+    // check if they have permissions to do this
+    hasPermission(currentUser, ['ADMIN', 'PERMISSION_UPDATE'])
+
+    // update permissions
+    return context.db.mutation.updateUser({
+      data: {
+        permissions: {
+          set: args.permissions
+        }
+      },
+      where: {
+        id: args.userId
+      }
+    }, info);
+
   }
 };
 
