@@ -55,9 +55,20 @@ const mutations = {
     const item = await context.db.query.item({ where }, `{
       id
       title
+      user {
+        id
+      }
     }`);
 
     // 2. Check if they own that item, or have the permissions
+    const ownsItem = item.user.id === context.request.userId;
+    const hasPermissions = context.request.user.permissions.some(
+      permission => ['ADMIN', 'ITEM_DELETE'].includes(permission)
+    );
+
+    if (!ownsItem || !hasPermissions) {
+      throw new Error ('You don\'t have permission to do this.');
+    }
 
     // 3. Delete it
     const deleteItemPromise = context.db.mutation.deleteItem({ where }, info);
@@ -98,8 +109,6 @@ const mutations = {
 
     // check if user exists
     const user = await context.db.query.user({ where: { email }});
-
-    console.log('user', user);
 
     if (!user) {
       throw new Error('Invalid email or password');

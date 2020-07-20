@@ -16,7 +16,11 @@ class DeleteItem extends Component {
     const confirmDeletion = confirm('Are you sure you want to delete this item?');
 
     if (confirmDeletion) {
-      await deleteItemMutation();
+      try {
+        await deleteItemMutation();
+      } catch (error) {
+        alert(error.message);
+      }
     }
   }
 
