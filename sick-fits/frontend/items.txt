@@ -1,0 +1,79 @@
+{
+  "title": "Air Max 2090",
+  "description": "I love those shoes.",
+  "price": 5999,
+  "image": "https://res.cloudinary.com/dvhponpbr/image/upload/v1592083088/sickfits/miewxu5spa1wir5otuhu.jpg",
+  "largeImage": "https://res.cloudinary.com/dvhponpbr/image/upload/c_scale,q_auto,w_1000/v1592083088/sickfits/miewxu5spa1wir5otuhu.jpg"
+}
+{
+  "title": "Acer Predator Monitor 4K with g-sync",
+  "description": "Great quality monitor with awesome performance and great resolution.",
+  "price": 99999,
+  "image": "https://res.cloudinary.com/dvhponpbr/image/upload/v1591489109/sickfits/kuc4yfeyvspjiogzbf2n.jpg",
+  "largeImage": "https://res.cloudinary.com/dvhponpbr/image/upload/c_scale,q_auto,w_1000/v1591489109/sickfits/kuc4yfeyvspjiogzbf2n.jpg"
+}
+{
+  "title": "Sony Alpha a6500",
+  "description": "Professional Camera with new features and it has great resolution.",
+  "price": 89999,
+  "image": "https://res.cloudinary.com/dvhponpbr/image/upload/v1591489055/sickfits/oa4e5ypqzkrj1u3sbhty.jpg",
+  "largeImage": "https://res.cloudinary.com/dvhponpbr/image/upload/c_scale,q_auto,w_1000/v1591489055/sickfits/oa4e5ypqzkrj1u3sbhty.jpg"
+}
+{
+  "title": "Samsung 970 EVO 500GB",
+  "description": "Super fast ssd drive.",
+  "price": 8199,
+  "image": "https://res.cloudinary.com/dvhponpbr/image/upload/v1591489001/sickfits/rkh2shuvoyyrmeqysicw.jpg",
+  "largeImage": "https://res.cloudinary.com/dvhponpbr/image/upload/c_scale,q_auto,w_1000/v1591489001/sickfits/rkh2shuvoyyrmeqysicw.jpg"
+}
+{
+  "title": "USB ADATA",
+  "description": "16GB usb pendrive",
+  "price": 499,
+  "image": "https://res.cloudinary.com/dvhponpbr/image/upload/v1591488941/sickfits/u4xnyskcipwhmtwj3fqt.jpg",
+  "largeImage": "https://res.cloudinary.com/dvhponpbr/image/upload/c_scale,q_auto,w_1000/v1591488941/sickfits/u4xnyskcipwhmtwj3fqt.jpg"
+}
+{
+  "title": "Jacket",
+  "description": "Awesome and lovely jacket.",
+  "price": 29999,
+  "image": "https://res.cloudinary.com/dvhponpbr/image/upload/v1591488902/sickfits/mgslwzspgu9dn4q7b0tx.jpg",
+  "largeImage": "https://res.cloudinary.com/dvhponpbr/image/upload/c_scale,q_auto,w_1000/v1591488902/sickfits/mgslwzspgu9dn4q7b0tx.jpg"
+}
+{
+  "title": "Yeezy",
+  "description": "Confortable tennis.",
+  "price": 49999,
+  "image": "https://res.cloudinary.com/dvhponpbr/image/upload/v1591488862/sickfits/hb1fj6wnbilnpoqd9xvo.jpg",
+  "largeImage": "https://res.cloudinary.com/dvhponpbr/image/upload/c_scale,q_auto,w_1000/v1591488862/sickfits/hb1fj6wnbilnpoqd9xvo.jpg"
+}
+{
+  "title": "T-Shirt",
+  "description": "Super cool tshirt.",
+  "price": 10000,
+  "image": "https://res.cloudinary.com/dvhponpbr/image/upload/v1585526777/sickfits/yre7vndedfzlkckswqev.webp",
+  "largeImage": "https://res.cloudinary.com/dvhponpbr/image/upload/c_scale,q_auto,w_1000/v1585526777/sickfits/yre7vndedfzlkckswqev.webp"
+}
+{
+  "title": "HP Laptop",
+  "description": "Cool Hp Laptop.",
+  "price": 69999,
+  "image": "https://res.cloudinary.com/dvhponpbr/image/upload/v1584304457/sickfits/ueyqrpalk5deruhgl6pi.jpg",
+  "largeImage": "https://res.cloudinary.com/dvhponpbr/image/upload/c_scale,q_auto,w_1000/v1584304457/sickfits/ueyqrpalk5deruhgl6pi.jpg"
+}
+{
+  "title": "Jeans",
+  "description": "Awesome Jeans",
+  "price": 6000,
+  "image": "https://res.cloudinary.com/dvhponpbr/image/upload/v1585526673/sickfits/fbccpgax2waqo3ptishi.jpg",
+  "largeImage": "https://res.cloudinary.com/dvhponpbr/image/upload/c_scale,q_auto,w_1000/v1585526673/sickfits/fbccpgax2waqo3ptishi.jpg"
+}
+{
+  "title": "MacBook Pro",
+  "description": "Awesome macbook pro.",
+  "price": 149999,
+  "image": "https://res.cloudinary.com/dvhponpbr/image/upload/v1585526826/sickfits/ebdan8ht4xdawyarbkr9.jpg",
+  "largeImage": "https://res.cloudinary.com/dvhponpbr/image/upload/c_scale,q_auto,w_1000/v1585526826/sickfits/ebdan8ht4xdawyarbkr9.jpg"
+}
+
+
