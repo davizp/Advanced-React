@@ -10,6 +10,16 @@ export const CURRENT_USER_QUERY = gql`
       email
       name
       permissions
+      cart {
+        id
+        quantity
+        item {
+          id
+          price
+          image
+          title
+        }
+      }
     }
   }
 `;
@@ -18,7 +28,7 @@ const USER = (props) => (
   <Query query={CURRENT_USER_QUERY} {...props}>
     {(payload) => {
       const { me } = payload.data || {};
-      return props.children(me)
+      return props.children(me);
     }}
   </Query>
 );
